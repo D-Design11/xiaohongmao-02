@@ -1,0 +1,66 @@
+{
+  "id": "city-landmark-visual",
+  "version": "1.0.0",
+  "name": "城市地标主视觉",
+  "skillPath": "SKILL.md",
+  "skillSha256": "02d071deee93a84b878db61464b3081a80615ece6da0b28d318a7bab3e193c79",
+  "scope": "asset-library-city-landmark-integration",
+  "requiredPermissions": [
+    "changeBackground",
+    "moveSubject",
+    "crop",
+    "outpaint"
+  ],
+  "assetPolicy": {
+    "allowedStatuses": [
+      "active"
+    ],
+    "verifyLibrarySource": true,
+    "requireVersionMatch": true,
+    "unknownPermission": "missing-not-allowed"
+  },
+  "inputs": {
+    "landmarkModes": [
+      "keywords",
+      "reference-image"
+    ],
+    "styles": [
+      "realistic",
+      "illustration",
+      "3d",
+      "silhouette"
+    ],
+    "targetUnits": [
+      "px",
+      "mm"
+    ],
+    "requireTargetSize": true,
+    "requireProtectedRegions": true
+  },
+  "checks": [
+    "occlusion",
+    "brand-color",
+    "landmark-accuracy",
+    "natural-integration",
+    "perspective",
+    "composition"
+  ],
+  "statuses": {
+    "missing": "needs-input",
+    "unsuitable": "not-recommended",
+    "ready": "ready-for-image-tool",
+    "notExecuted": "not-executed",
+    "unchecked": "not-checked",
+    "pass": "pass",
+    "optimize": "optimize",
+    "block": "block"
+  },
+  "execution": {
+    "toolRequired": true,
+    "keywordsAccuracyNeedsConfirmation": true,
+    "outpaintDoesNotGrantOtherPermissions": true,
+    "promptIsNotPixelProtection": true,
+    "confirmBeforeMaterialProduction": true,
+    "unknownCheckIsNotPass": true
+  }
+}

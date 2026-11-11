@@ -1,0 +1,11 @@
+interface:
+  display_name: 城市地标主视觉
+  short_description: 基于素材库主视觉融合城市地标，检查视觉质量并支持扩图
+  default_prompt: 请根据素材库主视觉和城市地标生成城市化视觉，先检查适配性与修改约束，再评估生成结果。
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
